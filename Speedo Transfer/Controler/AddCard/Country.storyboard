@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CountryVC-->
+        <scene sceneID="SsF-Tf-tNA">
+            <objects>
+                <viewController storyboardIdentifier="countryVC" id="Yd6-px-y1T" customClass="CountryVC" customModule="FinalProjectBM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDT-fL-6Da">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICv-KM-ONI">
+                                <rect key="frame" x="0.0" y="49" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Country " leftItemsSupplementBackButton="YES" customizationIdentifier="" id="hhH-1P-SeZ">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="DRop down 1" id="XTC-yX-Xtn"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Z6C-Kg-HqV">
+                                            <color key="tintColor" red="0.43921568630000002" green="0.43137254899999999" blue="0.42352941179999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NRp-Qf-zsE">
+                                <rect key="frame" x="16" y="123" width="361" height="495"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="selectCountryTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryTableViewCell" id="gH2-Fu-55K" customClass="selectCountryTableViewCell" customModule="FinalProjectBM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="56.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gH2-Fu-55K" id="uVZ-sN-8Od">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="56.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wec-zI-bDh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="56.333333333333336"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Country 1" translatesAutoresizingMaskIntoConstraints="NO" id="W6f-pH-zxH">
+                                                            <rect key="frame" x="10" y="15.666666666666664" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="123-ZD-WDE"/>
+                                                                <constraint firstAttribute="height" constant="25" id="gam-4F-hhC"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLc-9b-ZgR">
+                                                            <rect key="frame" x="50" y="18.666666666666671" width="40.666666666666657" height="19.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                            <color key="textColor" red="0.43921568630000002" green="0.43137254899999999" blue="0.42352941179999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selected" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-AS-4yr">
+                                                            <rect key="frame" x="331" y="18.333333333333332" width="20" height="19.999999999999996"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="9v5-eC-PME"/>
+                                                                <constraint firstAttribute="height" constant="20" id="pUd-jr-E1s"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="yzg-AS-4yr" secondAttribute="trailing" constant="10" id="L4I-sj-g98"/>
+                                                        <constraint firstItem="yzg-AS-4yr" firstAttribute="centerY" secondItem="zLc-9b-ZgR" secondAttribute="centerY" id="NGB-nc-DV1"/>
+                                                        <constraint firstItem="zLc-9b-ZgR" firstAttribute="leading" secondItem="W6f-pH-zxH" secondAttribute="trailing" constant="15" id="PWA-br-p8w"/>
+                                                        <constraint firstItem="zLc-9b-ZgR" firstAttribute="centerY" secondItem="W6f-pH-zxH" secondAttribute="centerY" id="RmW-G1-kQ3"/>
+                                                        <constraint firstAttribute="height" constant="56" id="VfL-4X-C8M"/>
+                                                        <constraint firstItem="W6f-pH-zxH" firstAttribute="centerY" secondItem="wec-zI-bDh" secondAttribute="centerY" id="afd-O5-lSm"/>
+                                                        <constraint firstItem="W6f-pH-zxH" firstAttribute="leading" secondItem="wec-zI-bDh" secondAttribute="leading" constant="10" id="erd-bM-4Ru"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wec-zI-bDh" firstAttribute="leading" secondItem="uVZ-sN-8Od" secondAttribute="leading" id="1VF-Qf-9SC"/>
+                                                <constraint firstItem="wec-zI-bDh" firstAttribute="top" secondItem="uVZ-sN-8Od" secondAttribute="top" id="MTv-vQ-Za1"/>
+                                                <constraint firstAttribute="trailing" secondItem="wec-zI-bDh" secondAttribute="trailing" id="T1b-kG-v4b"/>
+                                                <constraint firstAttribute="bottom" secondItem="wec-zI-bDh" secondAttribute="bottom" id="oXA-yz-RH5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="selectCountryTableViewCell"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b7-1K-9me">
+                                <rect key="frame" x="25" y="705" width="343" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <color key="baseBackgroundColor" red="0.52941176469999995" green="0.1176470588" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c1W-Tz-N50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c1W-Tz-N50" firstAttribute="bottom" secondItem="NRp-Qf-zsE" secondAttribute="bottom" constant="200" id="4ug-Ce-TBj"/>
+                            <constraint firstItem="c1W-Tz-N50" firstAttribute="top" secondItem="ICv-KM-ONI" secondAttribute="top" constant="10" id="8Aj-Pq-eny"/>
+                            <constraint firstItem="NRp-Qf-zsE" firstAttribute="top" secondItem="ICv-KM-ONI" secondAttribute="bottom" constant="30" id="KvU-eO-VuK"/>
+                            <constraint firstItem="c1W-Tz-N50" firstAttribute="trailing" secondItem="ICv-KM-ONI" secondAttribute="trailing" id="NPd-6l-BIZ"/>
+                            <constraint firstItem="ICv-KM-ONI" firstAttribute="leading" secondItem="c1W-Tz-N50" secondAttribute="leading" id="Po2-cq-Hdf"/>
+                            <constraint firstItem="3b7-1K-9me" firstAttribute="top" secondItem="NRp-Qf-zsE" secondAttribute="bottom" constant="87" id="WNB-Ue-k8s"/>
+                            <constraint firstItem="c1W-Tz-N50" firstAttribute="trailing" secondItem="3b7-1K-9me" secondAttribute="trailing" constant="25" id="aLi-yc-MoW"/>
+                            <constraint firstItem="3b7-1K-9me" firstAttribute="leading" secondItem="c1W-Tz-N50" secondAttribute="leading" constant="25" id="tcM-Tl-InI"/>
+                            <constraint firstItem="NRp-Qf-zsE" firstAttribute="leading" secondItem="c1W-Tz-N50" secondAttribute="leading" constant="16" id="ua6-mw-1ad"/>
+                            <constraint firstItem="c1W-Tz-N50" firstAttribute="trailing" secondItem="NRp-Qf-zsE" secondAttribute="trailing" constant="16" id="zqY-1B-kzk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nlv-Sb-rMc"/>
+                    <connections>
+                        <outlet property="tableView" destination="NRp-Qf-zsE" id="hah-Hm-qlz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V76-9h-W4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2066" y="-801"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Country 1" width="24" height="24"/>
+        <image name="DRop down 1" width="24" height="24"/>
+        <image name="selected" width="16" height="11"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
